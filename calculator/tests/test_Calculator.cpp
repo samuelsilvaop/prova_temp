@@ -10,7 +10,7 @@ TEST(TestCalculator, Integer)
     EXPECT_EQ (c.multiply(), 100);
     EXPECT_EQ (c.divide(), 1);
 
-    Calculator<int> c2 (0, 0);
+    Calculator<int> c2 (0, 1);
     EXPECT_EQ (c2.divide(), 0);
 }
 

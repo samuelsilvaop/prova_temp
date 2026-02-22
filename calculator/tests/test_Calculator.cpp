@@ -22,6 +22,6 @@ TEST(TestCalculator, Double)
     EXPECT_EQ (c.multiply(), 5);
     EXPECT_EQ (c.divide(), 20);
 
-    Calculator<double> c2 (0.0, 0.0);
+    Calculator<double> c2 (0.0, 1.0);
     EXPECT_EQ (c2.divide(), 0);
 }

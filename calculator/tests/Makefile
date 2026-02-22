@@ -32,7 +32,7 @@ all: $(TEST_TARGET)
 
 $(TEST_TARGET): $(OBJS) $(TEST_OBJS)
 	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) -DUNITTEST -I$(GTEST_DIR) $(LDFLAGS) $^ -L$(GTEST_LIB_DIR) -lgtest -lgtest_main -o $@
+	$(CXX) $(CXXFLAGS) -DUNITTEST -I$(GTEST_DIR) $(LDFLAGS) $^ -L$(GTEST_LIB_DIR) -lgtest -lgtest_main -o $@ -Wl,-rpath,$(GTEST_LIB_DIR)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(@D)
